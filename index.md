@@ -1,10 +1,10 @@
-## Welcome to GitHub Pages
+## SoundAssist
 
-You can use the [editor on GitHub](https://github.com/julianlowery/mte482site/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+SoundAssist is a wearable device to assist the hearing impaired. It sits around the wearer's neck constantly monitors the ambient noise to classify important sounds that may occur. It provides immediate haptic feedback to the user to notify them that an important sound has occurred, and sends a notification to their mobile device for more detailed information.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The device will replace hearing dogs, who currently play a very similar role, but are much expensive, difficult to obtain, and limiting to the user.
 
-### Markdown
+### Group
 
 **Test Change**. It includes conventions for
 
