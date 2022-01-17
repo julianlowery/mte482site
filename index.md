@@ -1,5 +1,7 @@
 ## SoundAssist
 
+### Project
+
 SoundAssist is a wearable device to assist the hearing impaired. It sits around the wearer's neck constantly monitors the ambient noise to classify important sounds that may occur. It provides immediate haptic feedback to the user to notify them that an important sound has occurred, and sends a notification to their mobile device for more detailed information.
 
 The device will replace hearing dogs, who currently play a very similar role, but are much expensive, difficult to obtain, and limiting to the user.
