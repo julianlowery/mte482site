@@ -10,7 +10,7 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 |Patrick Liu     | Julian Lowery | Bilun Sun     |
 |:--------------:|:-------------:|:-------------:|
-| Image |  Image | Image |
+| <img src="/lake.jpg" width="200" height="150"> |  <img src="/lake.jpg" width="200" height="150"> | <img src="/lake.jpg" width="200" height="150"> |
 
 ### Weekly Log
 
