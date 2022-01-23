@@ -25,7 +25,8 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 - Some hardware arrived! The nRF52840 module that will be integrated into the PCB for BLE connectivity, as well as an Adafruit nRF52840 Feather Express. This development board integrates the nRF52840 and can be used for early prototyping and testing.
 - The Arduino programming environment was configured and tested for the Feather, and initial tests of BLE capabilities were successful.
-- Progress on configuring the Jetson/Raspberry Pi was made, particularly in installing (and running) Pytorch and the plethora of dependencies required for the neural network inference processing. An interesting setback is that CUDA will likely be unavailable on the Jetson for a quantized neural net, posing a new dilema of whether to run a quantized model on the CPU, or a non-quantized model on the NVIDIA GPU.
+- Progress on configuring the Jetson/Raspberry Pi was made, particularly in installing (and running) Pytorch and the plethora of dependencies required for the neural network inference processing. Read this short article, [Arm's Funny Bone](/software-updates/jetson-nano-environment.md), by Patrick Liu on some of the quircks and difficulties with using an ARM Single-Board Computer (SBC) as our compute platform.
+- An interesting setback is that CUDA will likely be unavailable on the Jetson for a quantized neural net, posing a new dilema of whether to run a quantized model on the CPU, or a non-quantized model on the NVIDIA GPU.
 
 ### Source Code
 
