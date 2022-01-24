@@ -53,9 +53,37 @@ however, to save ourselves time, the compiled versions of PyTorch (one for the R
 SBCs like the Jetson Nano and Raspberry Pi tend to use Micro SD cards as their main drives. Micro SD cards are cheap and versatile, but they can be unreliable and
 prone to failure.
 
-In the interest of redundancy and quick recovery, we are also creating weekly backups of our SBCs so we can avoid having to go through the lengthy setup processes
+In the interest of redundancy and quick recovery, we are also creating occasional backups of our SBCs so we can avoid having to go through the lengthy setup processes
 in case of SD card failure. If an SD card fails, we can simply copy the most recent backup onto a new SD card and continue using the system as before. Because all
 of our code is placed on a Git repository, fetching updated code is also very straightforward.
+
+### Backup Procedure
+As we reached a stage where the Raspberry Pi and Jetson Nano both have their prerequisites set up, we decided to make our first backup. The procedure was as follows:
+
+1. Turn off the Raspberry Pi/Jetson Nano and remove the SD card, then connect the SD card to a PC running Linux
+2. Unmount the SD card so that no writes are performed to it
+3. Use zerofree to set all empty space on the SD card to 0's. This will allow us to compress the backup significantly.
+4. Use the `dd` command to clone the SD card and pipe the output to `gzip` for compression.
+
+After mounting the Jetson Nano's SD card to the PC, we can use `sudo fdisk -l` to look at what disks are mounted. In this particular case, the Jetson Nano's SD card
+shows up as `/dev/mmcblk0`, with a mount point of `/dev/mmcblk0p1`.
+
+To unmount the partition, the command is: `umount /dev/mmcblk0p1`.
+
+By setting all the empty space on the SD card to 0's, we can significantly compress our backup. Linux's `dd` utility creates an exact bit-for-bit copy of a disk or
+partition. As we have large (128 GB) SD cards, this means the backup would be 128 GB, despite being mostly empty space. The command for setting free space to zero's
+uses a tool called `zerofree` (available with `sudo apt install zerofree`), and can be called as such: `sudo zerofree -v /dev/mmcblk0p1`. The `-v` switch enables
+verbose output.
+
+Finally, we can use `dd` to copy the SD card with:
+`dd if=/dev/mmcblk0 bs=1M | gzip > path_to_backup.gz`
+
+The finished backup for the Raspberry Pi was only 16 GB. This is still quite large, but is definitely more reasonable than the 128 GB it would have been without compression.
+
+This backup procedure is somewhat time-consuming (especially as we have large SD cards), so we don't plan to do this often. From here onwards, if we ever need to build
+a library from the source code, we will back up the fully-built binaries only. Otherwise, we only plan to do backups when we reach major milestones in the project,
+because restoring the software will be relatively simple.
+
 
 ## Lessons Learned
 
