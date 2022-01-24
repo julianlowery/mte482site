@@ -28,6 +28,10 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 - Progress on configuring the Jetson/Raspberry Pi was made, particularly in installing (and running) Pytorch and the plethora of dependencies required for the neural network inference processing. Read this short article, [Arm's Funny Bone](/software-updates/jetson-nano-environment.md), by Patrick Liu on some of the quircks and difficulties with using an ARM Single-Board Computer (SBC) as our compute platform.
 - An interesting setback is that CUDA will likely be unavailable on the Jetson for a quantized neural net, posing a new dilema of whether to run a quantized model on the CPU, or a non-quantized model on the NVIDIA GPU.
 
+#### Week of Jan 24
+
+- With the resolution of our software dependencies for the Jetson Nano and Raspberry Pi, we were finally able to run some performance benchmarks to get an idea on how much performance we can expect with our system. We're working on summarzing our results in an article.
+
 ### Source Code
 
 The project software can be found on our [HearingAId Github repository](https://github.com/bilunsun/HearingAId).
