@@ -36,6 +36,10 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 - Began app development for testing bluetooth connection to mobile device within a custom application. The initial app will only have the essential functionality for verifying blueooth connection.
 
+#### Week of Feb 7
+
+- Preliminary success in connecting to the Feather development board via BLE from the custom application. Early success was somewhat finicky but promising. The goal on this front is to iron out a more full featured application to connect/disconnect, display data, and send push notifications, as well as to implement a proper program on the Feather to send ascii data that can be used to communicate arbitrary sound classifications.
+
 ### Source Code
 
 The project software can be found on our [HearingAId Github repository](https://github.com/bilunsun/HearingAId).
