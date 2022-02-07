@@ -32,6 +32,10 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 - With the resolution of our software dependencies for the Jetson Nano and Raspberry Pi, we were finally able to run some performance benchmarks to get an idea on how much performance we can expect with our system. We're working on summarzing our results in an article.
 
+#### Week of Jan 31
+
+- Began app development for testing bluetooth connection to mobile device within a custom application.
+
 ### Source Code
 
 The project software can be found on our [HearingAId Github repository](https://github.com/bilunsun/HearingAId).
