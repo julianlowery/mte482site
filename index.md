@@ -34,7 +34,7 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 #### Week of Jan 31
 
-- Began app development for testing bluetooth connection to mobile device within a custom application.
+- Began app development for testing bluetooth connection to mobile device within a custom application. The initial app will only have the essential functionality for verifying blueooth connection.
 
 ### Source Code
 
