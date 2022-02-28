@@ -40,6 +40,16 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 - Preliminary success in connecting to the Feather development board via BLE from the custom application. Early success was somewhat finicky but promising. The goal on this front is to iron out a more full featured application to connect/disconnect, display data, and send push notifications, as well as to implement a proper program on the Feather to send ascii data that can be used to communicate arbitrary sound classifications.
 
+#### Week of Feb 14
+
+- Focus was turned to the bluetooth module in charge of forwarding classifcations over bluetooth. The Bluetooth Low Energy (BLE) protocol stack was investigated so it could be properly utilized for our specific purpose. With that, a new program was written to advertise, connect, and transmit necessary data over bluetooth.
+- It was also necessary to set up communication between the Jetson and the bluetooth module. I2C was used and built into the program on the bluetooth module such that as the bluetooth module receives a classification from the I2C connection, it would immediately forward the classifcation over bluetooth.
+- At this point, the mobile application and user interface remain rudimentary.
+
+#### Week of Feb 21
+
+- The mobile application was further developped to include a better display of the detected audio classifcation, more detailed and user friendly connection status information, as well as alerts and vibrations for when a classification is detected.
+
 ### Source Code
 
 The project software can be found on our [HearingAId Github repository](https://github.com/bilunsun/HearingAId).
