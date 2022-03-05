@@ -49,6 +49,14 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 #### Week of Feb 21
 
 - The mobile application was further developped to include a better display of the detected audio classifcation, more detailed and user friendly connection status information, as well as alerts and vibrations for when a classification is detected.
+- A python program was created to interface with microphone on the device to collect audio data.
+- A separate python module was created to send data from the Jetson over I2C to the bluetooth module (for relaying to the mobile application).
+
+
+#### Week of Feb 28
+
+- The neural network was refined, and the form of audio data used for classifcations was changed from a Mel Spectrogram to the time domain representation.
+- The neural network was retrained on our own data collected on the device and a python program was written to filter the output of the neural network. Since the neural net would output a classifcation for every input, a low pass filter was created to smooth the output. More logic was added so that the classification would only be transferred to the bluetooth module in the event that a classification _changed_ since for one detection, the neural net would produce multiple classifications in a row.
 
 ### Source Code
 
