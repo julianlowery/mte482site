@@ -18,7 +18,7 @@ The device will replace hearing dogs, who currently play a very similar role, bu
 
 - Software infrastructure was created.
 - A detailed exploration of options for bluetooth connectivity between the SoundAssist and mobile device was conducted.
-- _some applicable AI stuff. Got quantization working for the first time?_
+- Continued iteration of training neural network adjusting hyperparameters, experimenting with both Mel spectogram and time domain data representation.
 - Jetson nano was selected over its alternantive, the Raspberry Pi.
 
 #### Week of Jan 17
